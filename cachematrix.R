@@ -1,3 +1,5 @@
+##This code builds a set of functions and returns the functions within a list to the parent environment. Please see comments within the code for a line by line description. 
+
 makeCacheMatrix <- function(x = matrix()) { ##x is initialized as an empty matrix function arguement
 AI <- NULL ## AI is set to NULL initializing it as an object to be used later
 set <- function (y) {
@@ -14,6 +16,7 @@ list(set = set, ## gives the name 'set'to the set() function defined above
 ## together the list assigns each of the functions as an element within a list and returns to the parent environment
 }
 
+## This function is required to populate and/or retrieve the inverse from an object of type makeCacheMatrix. See line by line comments for descriptions of code. 
 cacheSolve <- function(x, ...) { ## initializes the arguement x and introduces an ellipsis that allows the caller to pass additional arguements into the function
   AI <- x$getinverse () ## retreives the inverse of the object passed in as the arguement
   if(!is.null(AI)) { ## checks to see if the result is NULL
